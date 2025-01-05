@@ -11,9 +11,9 @@ from ..helper.telegram_helper.bot_commands import BotCommands
 async def start(_, message):
     buttons = ButtonMaker()
     buttons.url_button(
-        "Repo", "https://www.github.com/anasty17/mirror-leech-telegram-bot"
+        "𝐄𝐕𝟏𝐋 : 𝐄𝐦𝐩𝐞𝐫𝐢𝐮𝐦", "https://t.me/+ftQ2zebRk3NiMDM0"
     )
-    buttons.url_button("Code Owner", "https://t.me/anas_tayyar")
+    buttons.url_button("𝐎𝐰𝐧𝐞𝐫", "https://t.me/TEV1L")
     reply_markup = buttons.build_menu(2)
     if await CustomFilters.authorized(_, message):
         start_string = f"""
