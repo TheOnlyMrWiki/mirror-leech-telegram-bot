@@ -11,7 +11,7 @@ from ..helper.telegram_helper.bot_commands import BotCommands
 async def start(_, message):
     buttons = ButtonMaker()
     buttons.url_button(
-        "𝐄𝐕𝟏𝐋 : 𝐄𝐦𝐩𝐞𝐫𝐢𝐮𝐦", "https://t.me/+ftQ2zebRk3NiMDM0"
+        "𝕎𝕚𝕜𝕚", "https://t.me/TheOnlyMrLucifer"
     )
     buttons.url_button("𝐎𝐰𝐧𝐞𝐫", "https://t.me/TEV1L")
     reply_markup = buttons.build_menu(2)
