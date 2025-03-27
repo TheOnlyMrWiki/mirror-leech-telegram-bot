@@ -1,7 +1,6 @@
 from asyncio import gather
 
 from .... import LOGGER, sabnzbd_client, nzb_jobs, nzb_listener_lock
-from ...ext_utils.bot_utils import async_to_sync
 from ...ext_utils.status_utils import (
     MirrorStatus,
     get_readable_file_size,
@@ -56,6 +55,7 @@ class SabnzbdStatus:
         self.listener = listener
         self._gid = gid
         self._info = None
+        self.tool = "sabnzbd"
 
     async def update(self):
         self._info = await get_download(self._gid, self._info)
@@ -85,13 +85,13 @@ class SabnzbdStatus:
         return self._info["size"]
 
     def eta_raw(self):
-        return time_to_seconds(self._info["timeleft"])
+        return int(time_to_seconds(self._info["timeleft"]))
 
     def eta(self):
         return get_readable_time(self.eta_raw())
 
-    def status(self):
-        async_to_sync(self.update)
+    async def status(self):
+        await self.update()
         state = self._info["status"]
         if state == "Paused" and self.queued:
             return MirrorStatus.STATUS_QUEUEDL
