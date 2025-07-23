@@ -13,18 +13,18 @@ async def start(_, message):
     buttons.url_button(
         "𝕎𝕚𝕜𝕚", "https://t.me/TheOnlyMrLucifer"
     )
-    buttons.url_button("𝐎𝐰𝐧𝐞𝐫", "https://t.me/TEV1L")
+    buttons.url_button("⛥ 𝓦𝓲𝓴𝓲'𝖘 ⛥ 𝕶𝖎𝖓𝖌𝖉𝖔𝖒", "https://t.me/WikisKingdom")
     reply_markup = buttons.build_menu(2)
     if await CustomFilters.authorized(_, message):
         start_string = f"""
-This bot can mirror from links|tgfiles|torrents|nzb|rclone-cloud to any rclone cloud, Google Drive or to telegram.
+Welcome Too ℂ𝕠𝕟𝕥𝕖𝕟𝕥 𝔹𝕠𝕥 This Bot Is Owned By: ⛥ 𝓦𝓲𝓴𝓲 ⛥ .
 Type /{BotCommands.HelpCommand} to get a list of available commands
 """
         await send_message(message, start_string, reply_markup)
     else:
         await send_message(
             message,
-            "This bot can mirror from links|tgfiles|torrents|nzb|rclone-cloud to any rclone cloud, Google Drive or to telegram.\n\n⚠️ You Are not authorized user! Deploy your own mirror-leech bot",
+            "Welcome Too ℂ𝕠𝕟𝕥𝕖𝕟𝕥 𝔹𝕠𝕥 This Bot Is Owned By: ⛥ 𝓦𝓲𝓴𝓲 ⛥.\n\n⚠️ You Are Not Authorized ! For Authorization ⛥ 𝓦𝓲𝓴𝓲 ⛥ ⚠️",
             reply_markup,
         )
 
