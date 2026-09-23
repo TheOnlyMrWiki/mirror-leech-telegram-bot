@@ -13,7 +13,9 @@ async def start(_, message):
     buttons.url_button(
         "𝕎𝕚𝕜𝕚", "https://t.me/TheOnlyMrLucifer"
     )
-    buttons.url_button("⛥ 𝓦𝓲𝓴𝓲'𝖘 ⛥ 𝕶𝖎𝖓𝖌𝖉𝖔𝖒", "https://t.me/WikisKingdom")
+    buttons.url_button(
+        "𝔸𝕗𝕥𝕖𝕣 𝔻𝕒𝕣𝕜 𝕊𝕠𝕔𝕚𝕖𝕥𝕪", "https://theonlymrlucifer.nl/"
+    )
     reply_markup = buttons.build_menu(2)
     if await CustomFilters.authorized(_, message):
         start_string = f"""
